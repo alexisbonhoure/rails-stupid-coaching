@@ -1,0 +1,14 @@
+<h1>Coaching#answer</h1>
+<p>Find me in app/views/coaching/answer.html.erb</p>
+<%= @user_question %>
+<%= @answer %>
+
+<%if @user_question.downcase == "i am going to work right now!" %>
+  <p>..</p>
+<% elsif @user_question.end_with?("?") %>
+  <p>Silly question, get dressed and go to work!</p>
+<%else %>
+  <p>I don't care, get dressed and go to work!</p>"
+<%end %>
+
+<%= link_to "New question", ask_path  %>
